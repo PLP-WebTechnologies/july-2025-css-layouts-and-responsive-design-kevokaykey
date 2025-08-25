@@ -1,0 +1,90 @@
+/* General Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+}
+
+/* Navbar using Flexbox */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #333;
+  padding: 1rem;
+  color: white;
+}
+
+.nav-links a {
+  color: white;
+  margin-left: 1rem;
+  text-decoration: none;
+}
+
+.nav-links a:hover {
+  text-decoration: underline;
+}
+
+/* Hero Section */
+.hero {
+  background-color: #f4f4f4;
+  text-align: center;
+  padding: 2rem;
+}
+
+/* Grid Layout */
+.grid-section {
+  display: grid;
+  gap: 1rem;
+  padding: 1rem;
+  background-color: #fafafa;
+}
+
+.card {
+  background-color: #ddd;
+  padding: 2rem;
+  text-align: center;
+  border-radius: 8px;
+}
+
+/* Footer with Flexbox */
+.footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+}
+
+/* Media Queries */
+
+/* Mobile First: 1 column */
+.grid-section {
+  grid-template-columns: 1fr;
+}
+
+/* Tablet: 2 columns */
+@media (min-width: 600px) {
+  .grid-section {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .nav-links {
+    display: flex;
+  }
+}
+
+/* Desktop: 4 columns */
+@media (min-width: 992px) {
+  .grid-section {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .navbar {
+    padding: 1.5rem 3rem;
+  }
+}
